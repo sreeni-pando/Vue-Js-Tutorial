@@ -7,17 +7,28 @@
     </head>
     <body>
         <div id="vue-app">
-            <p>{{greet()}}</p>
-            <h1>{{name}}</h1>
+            <!-- <p>{{greet()}}</p>
+            <h1>{{name}}</h1> -->
             <!-- <a v-bind:href="website">Link</a> -->
-            <button v-on:click="add(1)">Add a year</button>
+            <!-- <button v-on:click.once="add(1)">Add a year</button>
             <button v-on:click="subtract(1)">Subtract a year</button>
             <button v-on:dblclick="add(10)">Add 10 years</button>
-            <button v-on:dblclick="subtract(10)">Subtract 10 years</button>
+            <button v-on:dblclick="subtract(10)">Subtract 10 years</button> -->
             <p>My Age is {{age}}</p>
-            <div id="canvas" @mousemove="UpdateXY">
+            <button v-on:click="a++">Add A</button>
+            <p>Value of A ={{a}}</p>
+            <button v-on:click="b++">Add B</button>
+            <p>Value of B ={{b}}</p>
+            <p>Current Age + A = {{addtoA()}}</p>
+            <p>Current Age + B = {{addtoB()}}</p>
+            <label>Name</label>
+            <input type="text"  v-model="name">
+            <label>{{name}}</label>
+            <label>Age</label>
+            <input type="text" v-on:keyup.enter="Logage">
+            <!-- <div id="canvas" @mousemove="UpdateXY">
                 {{x}},{{y}}
-            </div>
+            </div> -->
         </div>
         <script src="app.js"></script>
     </body>

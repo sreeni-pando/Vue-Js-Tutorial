@@ -1,15 +1,20 @@
 new Vue({
     el:"#vue-app",
     data:{
-        name:"Sreenivaasan",
-        website:"www.google.com",
-        age:23,
-        x:0,
-        y:0
+        name:"",
+        age:20,
+        a:0,
+        b:0
     },
     methods:{
         greet:function(){
             return "Hi"+this.name+", Good Morning";
+        },
+        addtoA:function(){
+            return this.age+this.a;
+        },
+        addtoB:function(){
+            return this.age+this.b;
         },
         add:function(inc){
             this.age+=inc;
@@ -21,6 +26,12 @@ new Vue({
             // console.log(event);
             this.x= event.offsetX;
             this.y= event.offsetY;
+        },
+        Logname: function(){
+            console.log("entered name");
+        },
+        Logage: function(){
+            console.log("entered age");
         }
     }
 })
